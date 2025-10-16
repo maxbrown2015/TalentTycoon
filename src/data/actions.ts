@@ -41,7 +41,7 @@ export const ACTION_CATALOG: ActionCard[] = [
     name: 'Invest in ATS Automation',
     category: 'Operations',
     cost: 320_000,
-    description: 'Ship calendaring macros so coordinators stop sleeping under their desks.',
+    description: 'Install a scheduling autopilot so coordinators can reclaim their actual jobs.',
     risk: 'low',
     effects: [
       {

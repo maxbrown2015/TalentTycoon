@@ -93,17 +93,20 @@ export default function App() {
       <div className="start-screen">
         <div className="start-card">
           <h1>Welcome to Talent Tycoon</h1>
-          <p>Welcome aboard,</p>
           <p>
-            You are stepping into the Head of Talent seat at Wedge. Product expects senior engineering hires on an accelerated timeline, finance is watching burn like a hawk, and I need calm status notes that prove both are under control.
+            Congrats, you’re now Head of Talent at Wedge.
+            Product wants senior engineers yesterday. Finance wants burn at zero. Your team’s morale is one sprint away from a down round.
           </p>
           <p>
-            Each quarter, choose the single talent initiative that keeps delivery on track, then navigate the inevitable curveball that follows. Expect investors to scrutinise temperament as closely as headcount velocity.
+            Each quarter, pick one bold talent move that keeps shipping on track. Then brace for the chaos curveball. Investors will judge your vibes and your velocity.
           </p>
           <p>
-            Sixteen quarters. Ship the hiring plan, keep morale breathable, and vest in peace.
+            Survive sixteen quarters. Ship the plan. Keep morale breathable. Get fully vested.
           </p>
-          <p>— Quinn, Chief Executive Officer</p>
+          <p>
+            No need for UBI—for now.
+          </p>
+          <p>— Derek, CEO</p>
           <button className="start-button" onClick={() => setStarted(true)}>
             Step Into the Seat
           </button>

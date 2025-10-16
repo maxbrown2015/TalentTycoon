@@ -11,7 +11,7 @@ export interface ScoreBreakdown {
   morale: number;
   budgetDiscipline: number;
   composite: number;
-  verdict: 'Bronze' | 'Silver' | 'Gold' | 'Needs Work';
+  verdict: 'Fired' | 'Stay the Course' | 'Promoted';
 }
 
 const clamp = (value: number, min = 0, max = 100) =>
@@ -33,10 +33,13 @@ export const evaluateFinalState = (state: GameState): ScoreBreakdown => {
     hiringCoverage * 0.35 + velocityScore * 0.3 + moraleScore * 0.2 + budgetDiscipline * 0.15
   );
 
-  let verdict: ScoreBreakdown['verdict'] = 'Needs Work';
-  if (composite >= 85) verdict = 'Gold';
-  else if (composite >= 70) verdict = 'Silver';
-  else if (composite >= 55) verdict = 'Bronze';
+  // Map composite score to final outcome
+  // Promoted: top-tier performance
+  // Stay the Course: solid but not exceptional
+  // Fired: underperformed across key metrics
+  let verdict: ScoreBreakdown['verdict'] = 'Stay the Course';
+  if (composite >= 85) verdict = 'Promoted';
+  else if (composite < 55) verdict = 'Fired';
 
   return {
     hiringCoverage,
